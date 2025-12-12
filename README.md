@@ -56,6 +56,7 @@ Google Draft is created and ready for final approval / sending.
 
 ## 📁 Repository Structure
 
+
 📦 email-ai-mailops-2.0
 │
 ├── README.md # Project overview
