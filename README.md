@@ -45,6 +45,20 @@ Every incoming message is transformed into a **Decision Context Card** that answ
 ---
 
 ## 🗂 Decision Context Card
+---
+
+## 📐 Agent Architecture
+
+This repository separates **how the agent thinks** from **how it is implemented**.
+
+- **Decision & Reasoning Layer**  
+  → [`agent_reasoning.md`](./agent_reasoning.md)
+
+- **Implementation Layer**  
+  → [`docs/implementation_notes.md`](./docs/implementation_notes.md)
+
+This structure makes the system readable both for business stakeholders and technical teams.
+
 
 Each email generates a card with:
 
