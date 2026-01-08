@@ -40,25 +40,11 @@ It is a **Decision Navigation Agent**.
 
 Every incoming message is transformed into a **Decision Context Card** that answers:
 
-> *“What should I do now, and why?”*
+> *What should I do now, and why?*
 
 ---
 
 ## 🗂 Decision Context Card
----
-
-## 📐 Agent Architecture
-
-This repository separates **how the agent thinks** from **how it is implemented**.
-
-- **Decision & Reasoning Layer**  
-  → [`agent_reasoning.md`](./agent_reasoning.md)
-
-- **Implementation Layer**  
-  → [`docs/implementation_notes.md`](./docs/implementation_notes.md)
-
-This structure makes the system readable both for business stakeholders and technical teams.
-
 
 Each email generates a card with:
 
@@ -74,14 +60,28 @@ Each email generates a card with:
 
 ---
 
+## 📐 Agent Architecture
+
+This repository separates **how the agent thinks** from **how it is implemented**.
+
+- **Decision & Reasoning Layer**  
+  → [`agent_reasoning.md`](./agent_reasoning.md)
+
+- **Implementation Layer**  
+  → [`docs/implementation_notes.md`](./docs/implementation_notes.md)
+
+This structure makes the system readable both for business stakeholders and technical teams.
+
+---
+
 ## 🗣 Agent Voice — Human Interface
 
 | Mode | Agent says |
 |------|-------------|
-| Lead | **Otrzymałeś lead, któremu warto się przyjrzeć.** |
-| Support | **Czy mógłbyś zajrzeć? Coś jest tutaj nie tak.** |
-| Urgent | **Potrzebujesz więcej informacji, żeby bezpiecznie wykonać następny krok.** |
-| Uncertain | **Nie jestem w stanie niczego zaproponować, nie mam w zwyczaju zgadywać.** |
+| Lead | Otrzymałeś lead, któremu warto się przyjrzeć. |
+| Support | Czy mógłbyś zajrzeć? Coś jest tutaj nie tak. |
+| Urgent | Potrzebujesz więcej informacji, żeby bezpiecznie wykonać następny krok. |
+| Uncertain | Nie jestem w stanie niczego zaproponować, nie mam w zwyczaju zgadywać. |
 
 This language is designed to create decision intuition — not pressure.
 
@@ -110,23 +110,12 @@ The human always owns the final responsibility.
 
 ## 🧩 How the Pipeline Works
 
-1. **Email Trigger**  
-   New message arrives.
-
-2. **Intent & Risk Analysis**  
-   AI identifies case type, emotional signals and business risk.
-
-3. **Decision Context Card Generation**  
-   The system builds the decision map for the operator.
-
-4. **Decision Logging**  
-   Each case is saved to build organizational memory.
-
-5. **Draft Support**  
-   AI prepares a response draft — only after the human decides the path.
-
-6. **Human Action**  
-   Operator reviews, edits and sends.
+1. **Email Trigger** – new message arrives  
+2. **Intent & Risk Analysis** – case type, emotional signals, business risk  
+3. **Decision Context Card Generation** – decision map is built  
+4. **Decision Logging** – organizational memory  
+5. **Draft Support** – response draft prepared  
+6. **Human Action** – operator reviews and sends
 
 ---
 
