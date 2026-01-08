@@ -1,134 +1,133 @@
-# AI MailOps 2.0 – Decision-Support System for Operational Email Triage
+# AI MailOps Agent v0.1 — Decision Support System for Operational Email Triage
 
-Designing human-centered workflows that help operational teams regain control over chaotic inboxes.
+A human-centered AI agent that helps people regain control over chaotic operational inboxes by providing clear decision context — not automation.
+
+---
 
 ## 🧠 Business Context
 
-In many organizations, shared inboxes are a hidden bottleneck in operational processes.  
-Important cases get lost, priorities are unclear and decisions are made chaotically.
+In many organizations, shared inboxes silently destroy decision quality.  
+Important cases get lost, priorities blur, and people start reacting instead of deciding.
 
-This project is not about replacing people with automation.
+This system does **not replace employees**.
 
-It is about designing a decision-support workflow that helps employees:
-- understand the intent of each message,
-- see what really matters,
-- and decide what to do next.
+It is designed to:
+- reduce cognitive overload,
+- highlight what really matters,
+- and guide operators toward the next safe decision.
+
+---
 
 ## 🔁 Before / After
 
 **Before**
-- no prioritization  
-- manual inbox triage  
-- high risk of missing critical cases  
+- chaotic inbox  
+- reactive handling  
+- missed critical cases  
+- decisions based on stress, not clarity  
 
 **After**
-- structured decision flow  
-- AI-supported action suggestions  
-- faster reaction time of operational teams  
+- clear decision context per message  
+- structured next-step suggestions  
+- operators regain control over their workflow  
+
+---
+
+## 🧭 AI MailOps Agent — Core Idea
+
+This is not an email automation system.  
+It is a **Decision Navigation Agent**.
+
+Every incoming message is transformed into a **Decision Context Card** that answers:
+
+> *“What should I do now, and why?”*
+
+---
+
+## 🗂 Decision Context Card
+
+Each email generates a card with:
+
+| Field | Meaning for the operator |
+|------|--------------------------|
+| Case Type | Lead / Support / Urgent |
+| Business Risk | low / medium / high |
+| AI Confidence | high / medium / low |
+| Recommended Path | reply / escalate / assign / ask |
+| Why this matters | one short sentence |
+| What you must decide | one concrete question |
+| Agent Voice | human guidance sentence |
+
+---
+
+## 🗣 Agent Voice — Human Interface
+
+| Mode | Agent says |
+|------|-------------|
+| Lead | **Otrzymałeś lead, któremu warto się przyjrzeć.** |
+| Support | **Czy mógłbyś zajrzeć? Coś jest tutaj nie tak.** |
+| Urgent | **Potrzebujesz więcej informacji, żeby bezpiecznie wykonać następny krok.** |
+| Uncertain | **Nie jestem w stanie niczego zaproponować, nie mam w zwyczaju zgadywać.** |
+
+This language is designed to create decision intuition — not pressure.
+
+---
 
 ## 🔄 Decision Flow
 
 Incoming Email  
-→ AI Intent Analysis  
-→ Suggested Decision  
-→ Human Action
+→ Intent & Risk Analysis  
+→ **Decision Context Card**  
+→ Suggested Next Actions  
+→ **Human Decision**
+
+The system never executes actions on its own.
+
+---
 
 ## 🤝 Human-in-the-Loop
 
-This system never sends or executes decisions automatically.  
-AI suggests actions, but final responsibility always belongs to the employee.
+AI does not decide.  
+It removes bad paths and shows the operator where thinking is required.
+
+The human always owns the final responsibility.
 
 ---
 
-## How the Pipeline Works
+## 🧩 How the Pipeline Works
 
-**1. Gmail Trigger – New Email Arrives**  
-Zapier captures incoming email metadata + body.
+1. **Email Trigger**  
+   New message arrives.
 
-**2. AI Classification (OpenAI GPT)**  
-Model assigns:
-- Type: Lead / Support / Question / Urgent / Spam  
-- Priority: 1–10  
-- Summary: clean, short description  
+2. **Intent & Risk Analysis**  
+   AI identifies case type, emotional signals and business risk.
 
-**3. Data Cleanup (Formatter Steps)**  
-Extracted components for Sheets & Gmail:
-- Timestamp  
-- Sender  
-- Subject  
-- Classification  
-- Priority  
-- Summary  
+3. **Decision Context Card Generation**  
+   The system builds the decision map for the operator.
 
-**4. Log to Google Sheets**  
-System saves every message to `MailOps_Log` sheet.
+4. **Decision Logging**  
+   Each case is saved to build organizational memory.
 
-**5. AI Draft Reply (OpenAI GPT)**  
-AI generates a short, helpful reply:
-- No greeting  
-- No signature  
-- No invented facts  
+5. **Draft Support**  
+   AI prepares a response draft — only after the human decides the path.
 
-**6. Gmail Draft Creation**  
-Google Draft is created and ready for final approval / sending.
+6. **Human Action**  
+   Operator reviews, edits and sends.
 
 ---
 
-## 📁 Repository Structure
+## ⚡ Why This Agent Matters
 
-📦 email-ai-mailops-2.0  
-├── README.md  
-├── prompts.md  
-└── docs/  
-&nbsp;&nbsp;&nbsp;&nbsp;└── zapier_steps.md  
-
----
-
-## ⚡ Why This Project Matters
-
-Modern companies drown in repetitive support emails.
-
-This system supports operational decision making by:
-- reducing response time  
-- preventing missed urgent messages  
-- standardizing communication quality  
-- saving hours of manual triage every week  
-- creating full audit logs  
-
-Perfect for:
-- customer service  
-- lead qualification  
-- internal operations teams  
-- small businesses  
-
----
-
-## 🧪 Live Demo (Flow)
-
-Email → Zapier → Extract fields → GPT classification & priority → Summary  
-→ Log to Google Sheets  
-→ AI draft reply → Gmail draft → Human approves → Send
-
----
-
-## 📌 Future Improvements
-
-- Auto-send for low-risk messages  
-- Slack notifications for urgent issues  
-- CRM integration (HubSpot / Pipedrive)  
-- Sentiment analysis  
-- Auto-tagging attachments  
-- Multi-language support  
+It helps organizations:
+- reduce decision fatigue,  
+- avoid costly misclassification,  
+- improve response quality,  
+- and build trust in human-AI cooperation.
 
 ---
 
 ## 👤 Author
 
 **MieterskiAI**  
-Junior AI Process & Decision Support Designer — designing human-centered AI workflows that help organizations regain control over complex operational processes.
-
----
-
-## ⭐ Support
-
-If this project was helpful, leave a ⭐ on GitHub.
+Junior AI Process & Decision Support Designer  
+Designing human-centered AI systems that help organizations regain control over complex operational processes.
