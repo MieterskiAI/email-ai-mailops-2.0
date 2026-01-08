@@ -40,7 +40,7 @@ AI suggests actions, but final responsibility always belongs to the employee.
 
 ---
 
-### How the Pipeline Works
+## How the Pipeline Works
 
 **1. Gmail Trigger – New Email Arrives**  
 Zapier captures incoming email metadata + body.
@@ -49,7 +49,7 @@ Zapier captures incoming email metadata + body.
 Model assigns:
 - Type: Lead / Support / Question / Urgent / Spam  
 - Priority: 1–10  
-- Summary: clean, short description
+- Summary: clean, short description  
 
 **3. Data Cleanup (Formatter Steps)**  
 Extracted components for Sheets & Gmail:
