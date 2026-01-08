@@ -1,4 +1,8 @@
 # AI MailOps Agent v0.1 — Decision Support System for Operational Email Triage
+## 🚧 Project Status
+
+AI MailOps Agent v0.1 is a functional decision-support prototype focused on reasoning architecture and human-in-the-loop design.  
+The system is ready for validation with real operational teams.
 
 A human-centered AI agent that helps people regain control over chaotic operational inboxes by providing clear decision context — not automation.
 
